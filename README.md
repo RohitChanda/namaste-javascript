@@ -50,4 +50,9 @@ Hoisting is a feature in JavaScript by which you can access variables and functi
 
 ![image](https://github.com/user-attachments/assets/09af16ee-58cc-4535-b1ba-2b7c2c668c86)
 
+![image](https://github.com/user-attachments/assets/422f7981-1d2a-4bad-83ba-8db85b57b43d)
+
+
+
+
 
