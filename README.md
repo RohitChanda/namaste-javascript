@@ -28,3 +28,11 @@ When the whole code is running behind the scenes a global execution context is c
 
 ![image](https://github.com/user-attachments/assets/0e2b13d7-af10-404b-b73b-a4efa4dcc3d3)
 
+#### call stack
+![image](https://github.com/user-attachments/assets/22b39b06-9ec3-4ae8-9bf7-d34dc9af4211)
+
+- At the bottom of the stack, we have the Global Execution Context.
+- Whenever a js program runs, the call stack is populated with a Global execution context.
+- When a new execution context is created suppose e1, it is pushed into the stack.
+- When e1 is done and returned, this e1 is moved out from the stack, and from the next line e2 is pushed into the call stack
+
