@@ -36,3 +36,17 @@ When the whole code is running behind the scenes a global execution context is c
 - When a new execution context is created suppose e1, it is pushed into the stack.
 - When e1 is done and returned, this e1 is moved out from the stack, and from the next line e2 is pushed into the call stack
 
+Call Stack maintains the order of execution of the execution context.
+
+The call stack is also known as →
+- Execution Context stack
+- Program Stack
+- Control stack
+- Runtime Stack
+- Machine Stack
+
+## Hoisting in JavaScript
+
+
+
+
