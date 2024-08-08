@@ -46,7 +46,8 @@ The call stack is also known as →
 - Machine Stack
 
 ## Hoisting in JavaScript
+Hoisting is a feature in JavaScript by which you can access variables and functions even before initializing it or putting some value in it. And you can access it without any error.
 
-
+![image](https://github.com/user-attachments/assets/09af16ee-58cc-4535-b1ba-2b7c2c668c86)
 
 
