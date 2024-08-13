@@ -386,3 +386,56 @@ console.log(obj.count);
 obj.decrementCounter();
 console.log(obj.count);
 ```
+
+## 🚀 Garbage collection in JavaScript:
+Low-level languages like C, have manual memory management primitives such as malloc() and free(). In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection).
+
+Low-level languages require the developer to manually determine at which point in the program the allocated memory is no longer needed and to release it.
+Some high-level languages, such as JavaScript, utilize a form of automatic memory management known as garbage collection (GC). The purpose of a garbage collector is to monitor memory allocation and determine when a block of allocated memory is no longer needed.
+
+
+Example →
+
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/5f3aafa2-f584-4afc-a6f6-888b361ffa7e">
+
+- Here we define b but b is not being used. and when the func1 function is returned,  b is garbage collected and a is not.
+- It's from a closure with a, and b just gone from the memory.
+
+
+## What is callback function in js?
+A callback is a function that is passed as an argument to another function that executes the callback based on the result. They are functions that are executed only after a result is produced. Callbacks are an important part of asynchronous JavaScript.
+
+##  What are the issues with the callback function?
+- Call back hell
+- Inversion of control.
+
+**CallBack hell:** Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. 
+
+```js
+function myFunc(res) {
+    func1(res,function () {
+        func2(res, function () {
+		      // more nested functions
+        })
+    })
+};
+```
+
+```js
+ const animateAll = (animate) => {
+        setTimeout(() => {
+            animate(words[0]);
+            setTimeout(() => {
+                animate(words[1]);
+                setTimeout(() => {
+                    animate(words[2]);
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    }
+```
+
+**Inversion of control:** We lose the control when we are using callback . So for example when we are passing a callback to another function(third party api call), we give the control from our code to the other code. And we don’t know if the other function will ever execute our callback function or not.
+
+
+
