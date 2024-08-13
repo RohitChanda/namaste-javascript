@@ -155,5 +155,6 @@ in this case a is hoisted but it gives us a reference error because, at this poi
 ### Q> What is the block in JavaScript?
 The block is used to combine multiple statements into one group.
 
-<img width="473" alt="image" src="https://github.com/user-attachments/assets/ce76e352-9b6c-4b1a-a5e5-7d8eda32f77b">
+<img width="474" alt="image" src="https://github.com/user-attachments/assets/e51246cb-a8b8-4d2b-a063-c7cb8fac5ae6">
+
 
