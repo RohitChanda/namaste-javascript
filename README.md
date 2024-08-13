@@ -216,3 +216,61 @@ Use let instead of var.  Because var has the glocal scope and let has blocked sc
 Use closures in every iteration so that it can create a new copy of i for itself.
 
 <img width="470" alt="image" src="https://github.com/user-attachments/assets/c9fdbec0-b619-42a0-af6d-ed701714a9ee">
+
+### Q>What are the advantages and disadvantages of closures?
+**Advantages:**
+- Module Design pattern
+- Curring
+- Function like once
+- Memorize
+- Maintaining state in the async world
+- setTimeout functions
+-Iterators
+- Data hiding and encapsulation
+
+**Disadvantages:**
+
+- Over consumptions of memory
+- Creating a function inside a function can lead to code duplication and slow down the application.
+- Increase the Complexity
+
+***Data hiding and encapsulation example***:
+  counter variable can not be accessible from outside.
+
+<img width="248" alt="image" src="https://github.com/user-attachments/assets/263205d6-d4a1-416a-ad4f-289e98139370">
+
+
+## Q> Difference b/w function statement and function expression
+
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/5eddb178-5c7a-4d68-902b-9690bc09caa8">
+
+## Q> What is Anonymous function?
+A function without a name is called an anonymous function.
+```function () {  }```
+
+This type of function does not have an identity, so if you write an anonymous function like above it throws SyntaxError. Because based on ECMA script specification a function statement should always have a name.
+
+the anonymous function used at a place where it is used as a value-like function expression.
+
+## Named Function Expression: 
+
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/61e9caf0-55d3-49fc-b9a1-0cf07bce5778">
+<br/>
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/b03fa0fb-ce15-4448-b53a-340ddc8c6e98">
+
+
+## Q> What is the difference b/w parameters and arguments: 
+
+<img width="356" alt="image" src="https://github.com/user-attachments/assets/b87cfb2c-c8ea-4a9e-95f1-092b29a2dc60">
+
+
+
+## Q> What is the First Class function?
+In JavaScript, a first-class function is a function that can be treated like any other value. This means that functions can be assigned to variables, passed as arguments to other functions, and returned from functions.
+
+## Q> What is the First Class Citizen?
+In JavaScript, functions are first-class citizens. This means that functions are treated like other data types like numbers and strings.
+
+## Q> What is the Higher Order function?
+A “higher-order function” is a function that accepts functions as parameters and returns a function.
+
