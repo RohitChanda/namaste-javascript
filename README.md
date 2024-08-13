@@ -309,3 +309,5 @@ let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let newArr1 = arr.myFilter((item) => item % 2 == 0);
 console.log(newArr1);
 ```
+
+***Note:*** always use the function key to assign a function in the prototype otherwise it will not work.
