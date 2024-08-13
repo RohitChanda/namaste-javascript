@@ -561,3 +561,46 @@ Promise.allSettled([p1,p2,p3])
 ]
 ```
 
+### Promise.race():
+- The Promise.race() static method takes an iterable of promises as input and returns a single Promise.
+- This returned promise settles with the eventual state of the first promise that settles.
+
+**Example 1**
+
+```js
+const p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000, "resolve from p1"));
+const p2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, "reject from p2"));
+const p3 = new Promise((resolve, reject) => setTimeout(resolve, 2000, "reject from p3"));
+
+Promise.race([p1,p2,p3])
+.then((result) => {
+    console.log(result)
+})
+.catch((err) => console.error(err));
+
+```
+
+***output***
+
+```reject from p2```
+
+**Example 2**
+
+```js
+const p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000, "resolve from p1"));
+const p2 = new Promise((resolve, reject) => setTimeout(reject, 1000, "reject from p2"));
+const p3 = new Promise((resolve, reject) => setTimeout(reject, 2000, "reject from p3"));
+
+Promise.race([p1,p2,p3])
+.then((result) => {
+    console.log(result)
+})
+.catch((err) => console.error(err));
+```
+
+***output***
+
+```
+reject from p2
+```
+
