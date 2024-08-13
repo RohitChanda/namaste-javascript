@@ -316,11 +316,31 @@ console.log(newArr1);
 ## 🚀 Asynchronous JavaScript and Event loop
 check this tutorial - [https://www.youtube.com/watch?v=8zKuNo4ay8E&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=18](https://www.youtube.com/watch?v=8zKuNo4ay8E&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=18)
 
-  <img width="500" alt="image" src="https://github.com/user-attachments/assets/63689934-85f8-49df-a3be-b6fa854ac6e1">
+  <img width="450" alt="image" src="https://github.com/user-attachments/assets/63689934-85f8-49df-a3be-b6fa854ac6e1">
 
 - Anything that comes inside the call stack quickly executes, that how its works
 - Browser gives access to the calltsack or the js Engine to use all the super power by using Global Object.
 - Browser web apis are not part of JavaScript
 - Global Object in the window object. Using this keyword, our call stack can access those web apis.
+
+
+## 🚀 How setTimeout works?
+
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/f0f4989a-4daf-4d36-b882-dd486c76df68">
+
+- When we pass a call-back function in setTimeout it registers the cb function into web APIs and attaches a timer.
+- After the timer expires the callback function is put into the callback queue.
+- Then the event loop checks if we have something in the callback queue and the call stack is empty or not  then the event loop takes the callback and pushes it into the call stack. And call stack quickly executes the callback function.
+
+## 🚀 How the fetch function works?
+
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/5dc7b7f0-11d5-4da4-ab24-088f2a56d367">
+
+
+- When we pass a call-back function in fetch it registers the cbF function.
+- After the network call and in case of promises the callback function goes into the Micrtask queue.
+- The event loop checks if the callstack is empty and then pushes the callback function into the callstack
+
+***Note:***  The Microtask queue has higher priority than the callback queue.Functions under microtask queue are executed first and functions under callback queue are executed later.
 
 
