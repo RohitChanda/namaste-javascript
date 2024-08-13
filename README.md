@@ -402,10 +402,10 @@ Example →
 - It's from a closure with a, and b just gone from the memory.
 
 
-## What is callback function in js?
+## 🚀 What is callback function in js?
 A callback is a function that is passed as an argument to another function that executes the callback based on the result. They are functions that are executed only after a result is produced. Callbacks are an important part of asynchronous JavaScript.
 
-##  What are the issues with the callback function?
+## 🚀 What are the issues with the callback function?
 - Call back hell
 - Inversion of control.
 
@@ -437,5 +437,38 @@ function myFunc(res) {
 
 **Inversion of control:** We lose the control when we are using callback . So for example when we are passing a callback to another function(third party api call), we give the control from our code to the other code. And we don’t know if the other function will ever execute our callback function or not.
 
+## 🚀 What are Promises in js?
+- The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+- This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
+- JavaScript Promises to simplify managing multiple asynchronous operations, preventing callback hell, Inversion of control and unmanageable code.
+
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/22ed9a4e-8782-49de-b4b6-5920b3094491">
+
+**A Promise is in one of these states:**
+
+- **pending:** initial state, neither fulfilled nor rejected.
+- **fulfilled:** meaning that the operation was completed successfully.
+- **rejected:** meaning that the operation failed.
+  
+Promise Objects are **Immutable**. (not editable).
+
+Promise objects have two major properties. One is the **state**, Another one is the **result**
 
 
+## 🚀 What is Promise Chaining?
+Promise Chaining is a simple concept by which we may initialize another promise inside our .then() method and accordingly, we may execute our results. The function inside then captures the value returned by the previous promise.
+
+```js
+const promise = new Promise((resolve, reject) => {
+    resolve("Hello js");
+});
+promise
+.then((res1) => {
+    console.log("1st then", res1);
+    return new Promise((resolve, reject) =>{
+        resolve("We are awesome")
+    })
+}).then((res2) => {
+    console.log("2nd then", res2);
+}).catch((err) => console.error(err))
+```
