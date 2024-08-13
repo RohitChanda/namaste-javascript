@@ -104,4 +104,32 @@ It is the local memory along with the Lexical Environment of Parent.
 <img width="473" alt="image" src="https://github.com/user-attachments/assets/ccdccce0-9478-44fa-931d-70e9259401e8">
 
 
+## 🚀 Let and const in js:
+- let and const are hoisted but they are hoisted very differently than var.
+- let and const not stored in Global Object like var.
+
+  <img width="440" alt="image" src="https://github.com/user-attachments/assets/1a5c7115-80e0-47d8-94e4-0c839da8c87b">
+
+- Even before a single line of code executed , we can see javascript allocated a memory for **a** in **Script memory** object but **not assigned any value**.But in case var is assigned **undefined** to it.
+- We can't access these let and const declarations before putting some value in them. That is what hoisting is using let.
+
+  <img width="437" alt="image" src="https://github.com/user-attachments/assets/7d857f3f-d5b1-4460-979f-702e9969f204">
+
+### Q> What is Temporal DeadZone?
+Is the time since the let and const variables were hoisted and  till it is initialized some value. Time b/w that is called Temporal DeadZone.
+
+**Note** → Even before a single line of code executed, we can see javascript allocated a memory for let variable in Script memory object but not assign any value (even not assign undefined )
+
+### Q> Is let and const hoisted? 
+Yes but they are facing temporal dead zone.
+
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/cbe8a437-17f5-43cb-b412-c50340014168">
+
+
+
+
+
+
+
+
 
