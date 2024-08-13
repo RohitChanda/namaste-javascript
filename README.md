@@ -472,3 +472,92 @@ promise
     console.log("2nd then", res2);
 }).catch((err) => console.error(err))
 ```
+## 🚀 Promise API:
+
+### Promise.all()
+- The Promise.all() static method takes an iterable or array of promises as input and returns a single Promise.
+- This returned promise is fulfilled when all of the input's promises are fulfilled (including when an empty iterable or array is passed). with an array of fulfillment values.
+- It rejects when any of the input's promises is rejected, with this first rejection reason
+
+**Example 1**
+
+```js
+const p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000, "resolve from p1"));
+const p2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, "resolve from p2"));
+const p3 = new Promise((resolve, reject) => setTimeout(resolve, 500, "resolve from p3"));
+
+
+Promise.all([p1,p2,p3])
+.then((result) => {
+    console.log(result)
+})
+.catch((err) => console.error(err));
+```
+***output***
+
+```
+[
+    "resolve from p1",
+    "resolve from p2",
+    "resolve from p3"
+]
+
+```
+
+
+**Example 2**
+
+```js
+const p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000, "resolve from p1"));
+const p2 = new Promise((resolve, reject) => setTimeout(reject, 1000, "reject from p2"));
+const p3 = new Promise((resolve, reject) => setTimeout(reject, 500, "reject from p3"));
+
+
+Promise.all([p1,p2,p3])
+.then((result) => {
+    console.log(result)
+})
+.catch((err) => console.error(err));
+```
+
+***output:***
+
+```reject from p3```
+
+
+### Promise.allSettled()
+- The Promise.allSettled() static method takes an iterable of promises as input and returns a single Promise. 
+- This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
+
+```js
+const p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000, "resolve from p1"));
+const p2 = new Promise((resolve, reject) => setTimeout(reject, 1000, "reject from p2"));
+const p3 = new Promise((resolve, reject) => setTimeout(reject, 2000, "reject from p3"));
+
+Promise.allSettled([p1,p2,p3])
+.then((result) => {
+    console.log(result)
+})
+.catch((err) => console.error(err));
+
+```
+
+***output***
+
+```
+[
+    {
+        "status": "fulfilled",
+        "value": "resolve from p1"
+    },
+    {
+        "status": "rejected",
+        "reason": "reject from p2"
+    },
+    {
+        "status": "rejected",
+        "reason": "reject from p3"
+    }
+]
+```
+
