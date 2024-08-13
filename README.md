@@ -603,4 +603,49 @@ Promise.race([p1,p2,p3])
 ```
 reject from p2
 ```
+### Promise.any()
+- The Promise.any() static method takes an iterable of promises as input and returns a single Promise. 
+- This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value.
+- It rejects when all of the input's promises are rejected (including when an empty iterable is passed), with an AggregateError containing an array of rejection reasons.
 
+**Example 1**
+
+```js
+const p1 = new Promise((resolve, reject) => setTimeout(resolve, 3000, "resolve from p1"));
+const p2 = new Promise((resolve, reject) => setTimeout(reject, 1000, "reject from p2"));
+const p3 = new Promise((resolve, reject) => setTimeout(resolve, 2000, "reject from p3"));
+
+Promise.any([p1,p2,p3])
+.then((result) => {
+    console.log(result)
+})
+.catch((err) => console.error(err));
+```
+
+***output:***
+
+```reject from p3```
+
+**Example 2**
+
+```js
+const p1 = new Promise((resolve, reject) => setTimeout(reject, 3000, "reject from p1"));
+const p2 = new Promise((resolve, reject) => setTimeout(reject, 1000, "reject from p2"));
+const p3 = new Promise((resolve, reject) => setTimeout(reject, 2000, "reject from p3"));
+
+Promise.any([p1,p2,p3])
+.then((result) => {
+    console.log(result)
+})
+.catch((err) => console.error(err.errors));
+```
+
+***output***
+
+```
+[
+    "reject from p1",
+    "reject from p2",
+    "reject from p3"
+]
+```
