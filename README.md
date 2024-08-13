@@ -1,7 +1,7 @@
 # Core Concept of JavaScript
 
 
-## Execution Context:
+## 🚀 Execution Context:
 - Everything in JavaScript happens inside an execution context.
 - You can assume that this execution context is a big box of containers in which the whole javascript code is executed.
 - It has two components. ( 1.**Memory Component** , 2.**Code Component**)                                                                                  
@@ -45,12 +45,29 @@ The call stack is also known as →
 - Runtime Stack
 - Machine Stack
 
-## Hoisting in JavaScript
+## 🚀 Hoisting in JavaScript
+
 Hoisting is a feature in JavaScript by which you can access variables and functions even before initializing it or putting some value in it. And you can access it without any error.
 
 ![image](https://github.com/user-attachments/assets/09af16ee-58cc-4535-b1ba-2b7c2c668c86)
 
-![image](https://github.com/user-attachments/assets/422f7981-1d2a-4bad-83ba-8db85b57b43d)
+<img width="469" alt="image" src="https://github.com/user-attachments/assets/93f9c7be-1663-413c-bbb8-543bf977a6ac">
+
+### Explain this code
+
+<img width="469" alt="image" src="https://github.com/user-attachments/assets/e47a32f4-f231-4766-a3eb-b551a82d3f78">
+
+***Explanation***
+
+In Execution Context : 
+
+<img width="474" alt="image" src="https://github.com/user-attachments/assets/8de164f7-47a7-44dc-b1b2-54801d1adebb">
+
+
+
+
+
+
 
 
 
