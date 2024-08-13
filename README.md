@@ -172,3 +172,24 @@ It means all variables and functions we can access in this block.
 <img width="470" alt="image" src="https://github.com/user-attachments/assets/ca7fa459-c933-4abe-8e50-460be3648bdc">
 
 
+### Q> What is Shadowing in JavaScript?
+<img width="497" alt="image" src="https://github.com/user-attachments/assets/35437455-89d3-4379-b8a6-53bf7b86a831">
+
+<img width="497" alt="image" src="https://github.com/user-attachments/assets/c2c6f741-ec19-4e39-a2fa-1ad084476ec5">
+
+
+### Q> What is illegal shadowing?
+<img width="472" alt="image" src="https://github.com/user-attachments/assets/f8486f58-179a-4a3d-aaac-756fc6d38efe">
+
+***Note***: var is a function scope
+
+<img width="470" alt="image" src="https://github.com/user-attachments/assets/030184fa-f1d6-44d3-9999-a5566318166a">
+
+
+
+***Note***:
+- Shadowing let with let : possible
+- let using var          : not possible
+- var with let           : possible
+
+
