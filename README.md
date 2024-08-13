@@ -649,3 +649,57 @@ Promise.any([p1,p2,p3])
     "reject from p3"
 ]
 ```
+
+
+## 🚀 What is async function?
+The async function declaration creates a binding of a new async function to a given name
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/9bb051bf-7d94-460c-a0ed-1ca4d047187c">
+
+
+## 🚀 What is await?
+The await operator is used to wait for a Promise and get its fulfillment value. It can only be used inside an async function or at the top level of a module.
+
+## 🚀 Explanation of this keyword in javascript: 
+The this keyword refers to the context where a piece of code, such as a function's body, is supposed to run.
+
+### In Global space: 
+- ```this``` refers to global object. 
+- For browser → ```window``` object,
+- For node.js → ```global``` object
+
+### In side a function:
+Value of this keyword inside a function is undefined. But javascript has something known as this ***substitution***, so the value becomes equal to the global object if you use non-strict mode.
+
+So, the Value of ```this``` keyword inside a function varies in strict/ non-strict mode.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/3a6f38c4-542f-49e4-aaef-907bfb3eb352">
+
+**The value of this keyword depends on how to function is called:**
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/c39183f0-fc5c-40ff-b654-98ff569bf803">
+
+### When ```this``` inside an object method:
+When even if you are inside of a method the value of this will refer to the object where the method is present.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/3a96d49e-2704-42e9-a310-880ac996bec7">
+
+**For arrow function**
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/3f6e8d19-890a-4d7c-a2bf-6958d7c26de6">
+
+
+### When ```this``` method after using call function
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/831095ef-9c84-4662-9cc0-9ca5414f556f">
+
+**In arrow functions**: ```this``` retains the value of the enclosing lexical context's. That means where the arrow function is lexically enclosed.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/c6da568f-048a-4d0c-b837-9e97e75376ad">
+
+### When ```this``` inside DOM elements: 
+Refers to the particular HTML elements.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/23d358c6-8fe1-47dc-8082-be20acba8156">
+
+
