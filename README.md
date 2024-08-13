@@ -311,3 +311,16 @@ console.log(newArr1);
 ```
 
 ***Note:*** always use the function key to assign a function in the prototype otherwise it will not work.
+
+
+## 🚀 Asynchronous JavaScript and Event loop
+check this tutorial - [https://www.youtube.com/watch?v=8zKuNo4ay8E&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=18](https://www.youtube.com/watch?v=8zKuNo4ay8E&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=18)
+
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/63689934-85f8-49df-a3be-b6fa854ac6e1">
+
+- Anything that comes inside the call stack quickly executes, that how its works
+- Browser gives access to the calltsack or the js Engine to use all the super power by using Global Object.
+- Browser web apis are not part of JavaScript
+- Global Object in the window object. Using this keyword, our call stack can access those web apis.
+
+
