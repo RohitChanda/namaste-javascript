@@ -193,3 +193,26 @@ It means all variables and functions we can access in this block.
 - var with let           : possible
 
 
+## Q> What is Closures in js: 
+Function along with its lexical scope bundle together to form a closure.
+
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/49df8dab-fda4-4f68-acf9-928626709336">
+<br/>
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/02cb04a9-3de2-43c1-aea4-76df6e61d035">
+<br/>
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/7b14319f-3cdd-4834-a912-b1678c413ba7">
+
+
+## SetTimeout with Closures : 
+
+<img width="470" alt="image" src="https://github.com/user-attachments/assets/70edef77-0bf9-4abc-b80f-69ee09e6c3ed">
+
+**Q> What is the solution to fix this problem?**
+
+Use let instead of var.  Because var has the glocal scope and let has blocked scope.So a new copy of i is created for every iteration
+
+**Q> Can you find another solution where you can not use let, use var only:**
+
+Use closures in every iteration so that it can create a new copy of i for itself.
+
+<img width="470" alt="image" src="https://github.com/user-attachments/assets/c9fdbec0-b619-42a0-af6d-ed701714a9ee">
