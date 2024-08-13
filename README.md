@@ -157,4 +157,18 @@ The block is used to combine multiple statements into one group.
 
 <img width="474" alt="image" src="https://github.com/user-attachments/assets/e51246cb-a8b8-4d2b-a063-c7cb8fac5ae6">
 
+### Q> What is block Scope?
+It means all variables and functions we can access in this block.
+
+***Note***: let and const variables are blocked scope, let's see an example.
+
+  <img width="469" alt="image" src="https://github.com/user-attachments/assets/5b94b242-0fdc-4f0c-96f0-75377be88b3f">
+
+* And in line, 40 let and const variables are no longer accessible. 
+* We can not access this let and const variable outside of this block. Because it’s only in the block scope.
+* Whereas we can access var even outside of the block because it is in the global scope.
+
+
+<img width="470" alt="image" src="https://github.com/user-attachments/assets/ca7fa459-c933-4abe-8e50-460be3648bdc">
+
 
