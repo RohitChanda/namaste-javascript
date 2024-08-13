@@ -274,3 +274,38 @@ In JavaScript, functions are first-class citizens. This means that functions are
 ## Q> What is the Higher Order function?
 A “higher-order function” is a function that accepts functions as parameters and returns a function.
 
+
+## 🚀 Create a custom function like map and filter and assign it to Array.Prototype
+**map**
+
+```js
+Array.prototype.myMap = function (cb) {
+  let output = [];
+  for (let i = 0; i < this.length; i++) {
+    output.push(cb(this[i], i));
+  }
+  return output;
+};
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let newArr = arr.myMap((item) => item * 2);
+console.log(newArr);
+```
+
+**filter**
+
+```js
+Array.prototype.myFilter = function (cb) {
+  let output = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i], i)) {
+      output.push(this[i]);
+    }
+  }
+  return output;
+};
+
+let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let newArr1 = arr.myFilter((item) => item % 2 == 0);
+console.log(newArr1);
+```
