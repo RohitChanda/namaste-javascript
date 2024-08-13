@@ -343,4 +343,22 @@ check this tutorial - [https://www.youtube.com/watch?v=8zKuNo4ay8E&list=PLlasXeu
 
 ***Note:***  The Microtask queue has higher priority than the callback queue.Functions under microtask queue are executed first and functions under callback queue are executed later.
 
+## 🚀 What can come inside the microtask queue and callback queue?
+| Microtask queue                                                                                                  | Callback queue/Task queue                                                              |
+| -----------------------------------------------------------------------------------------------------------------| ------------------------------------------------- |
+| All callback functions that come through promises will go inside the microtask queue and all mutation observers. | The callback function of setTimeout, DOM APIs.    |
+
+
+
+## 🚀 Suppose three tasks are present in the microstack queue and three tasks are present in the callback queue then what will happen? 
+Once all tasks inside the microtask queue are executed then the event loop gets the opportunity to execute those tasks inside the callback queue.
+
+ 
+## 🚀 What is the Starvation of the callback queue?
+We know the event loops give the higher priority to the microtask queue before any of the callback queue’s task. And suppose task inside microtask queue creates more tasks inside the microtask queue and goes on then the callback queue never gets a chance to execute for a long time. This is called starvation of the callback queue.
+
+## Trust issue with setTimeout : 
+Here we try to block the main thread for 10 seconds.
+
+<img width="550" alt="image" src="https://github.com/user-attachments/assets/9ebad9b1-334b-4960-a4e3-7a4065c2fa98">
 
