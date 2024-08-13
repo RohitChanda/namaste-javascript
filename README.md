@@ -120,16 +120,40 @@ Is the time since the let and const variables were hoisted and  till it is initi
 
 **Note** → Even before a single line of code executed, we can see javascript allocated a memory for let variable in Script memory object but not assign any value (even not assign undefined )
 
+### Q> How to avoid a temporal dead zone?
+Push all the initialization and declaration on the top of the code.
+
 ### Q> Is let and const hoisted? 
 Yes but they are facing temporal dead zone.
 
 <img width="524" alt="image" src="https://github.com/user-attachments/assets/cbe8a437-17f5-43cb-b412-c50340014168">
 
 
+## Errors while redeclare variable inside javascript
+
+- Redeclare a let variable throws **SytanxError**. So you can not use the same name in the same scope  again.
+
+  <img width="472" alt="image" src="https://github.com/user-attachments/assets/1122f023-7874-4165-b54b-0719fa887b39">
+
+- In the case of const when you declare a variable with const it expects that you will initialize it in the same line otherwise it throws a **SyntaxError**.
+
+  <img width="473" alt="image" src="https://github.com/user-attachments/assets/f378eb2b-e053-40bb-800a-73f72ebb091e">
+
+- We cannot change the value of a const variable, it throws a **TypeError**.
+
+  <img width="437" alt="image" src="https://github.com/user-attachments/assets/33925aec-c4c8-44b1-b3c3-47a57279591e">
 
 
 
+##  Q> Explain this scenario.
+<img width="472" alt="image" src="https://github.com/user-attachments/assets/a8c1c8cd-b6ec-4cf1-b0b2-873e3305df02">
 
+in this case a is hoisted but it gives us a reference error because, at this point of time, a is in the temporal deadzone.
 
+## Block in JavaScript
 
+### Q> What is the block in JavaScript?
+The block is used to combine multiple statements into one group.
+
+<img width="473" alt="image" src="https://github.com/user-attachments/assets/ce76e352-9b6c-4b1a-a5e5-7d8eda32f77b">
 
