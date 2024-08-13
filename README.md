@@ -61,15 +61,47 @@ Hoisting is a feature in JavaScript by which you can access variables and functi
 
 In Execution Context : 
 
-<img width="474" alt="image" src="https://github.com/user-attachments/assets/8de164f7-47a7-44dc-b1b2-54801d1adebb">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/8de164f7-47a7-44dc-b1b2-54801d1adebb">
 
 
 
+## Q> Is var Allow Redeclarations?
+yes.
+
+<img width="480" alt="image" src="https://github.com/user-attachments/assets/3d2e345f-1bcf-4f57-a3e2-4e6ee4f843de">
+
+
+## Q> What is the shortest js program?
+- An empty js file.
+- Even though a file is empty JavaScript creates a Global execution context and also sets something in the memory space.
+- At the top/global level, this points to the window object.
+
+
+## Q> Difference b/w undefined and not-defined?
+**undefined**: It means it is present in the memory but not assigned any value.
+**not-defined**: It not present in the memory.
 
 
 
+## 🚀 Scope
+
+### Q> What is the scope? 
+Where you can access specific variables and function in our code. Scope is directly dependent on the lexical environment.
+
+### Q> What does Scope of a variable means? 
+
+### Q> Is b inside the scope of a function?
 
 
+## 🚀 Lexical Environment
+
+### Q> What is the Lexical Environment?
+It is the local memory along with the Lexical Environment of Parent.
+
+<img width="472" alt="image" src="https://github.com/user-attachments/assets/b3fdfcda-525e-491b-985f-2c1bfa01d908">
+<br/>
+
+<img width="473" alt="image" src="https://github.com/user-attachments/assets/ccdccce0-9478-44fa-931d-70e9259401e8">
 
 
 
